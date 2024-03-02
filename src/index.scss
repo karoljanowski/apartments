@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lilita+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient {
+    background: rgb(247, 246, 236);
+    background: linear-gradient(180deg, rgba(247, 246, 236, 1) 0%, rgba(248, 247, 234, 1) 25%, rgba(250, 248, 237, 1) 40%, rgba(251, 248, 235, 1) 56%, rgba(250, 247, 235, 1) 81%);
+}
+
+.gradient-2 {
+    background: rgb(204, 205, 201);
+    background: linear-gradient(180deg, rgba(204, 205, 201, 1) 0%, rgba(206, 208, 203, 1) 41%, rgba(214, 211, 205, 1) 77%);
+}

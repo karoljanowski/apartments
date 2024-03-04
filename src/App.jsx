@@ -1,20 +1,16 @@
 import React from 'react'
-import { Hero } from './components/Hero'
-import { About } from './components/About';
-import { Adventages } from './components/Adventages';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMapLocationDot, faLocationDot, faStar } from '@fortawesome/free-solid-svg-icons'
-
-
-library.add( faMapLocationDot, faLocationDot, faStar )
+import { Landing } from './components/Landing'
+import { Route, Routes } from 'react-router-dom'
+import { Login } from './components/Login'
 
 function App() {
 
     return (
         <>
-          <Hero/>    
-          <About/>
-          <Adventages/>
+          <Routes>
+            <Route index path="/" element={<Landing />}/>
+            <Route path='/admin' element={<Login/>}/>
+          </Routes>
         </>
     )
 }

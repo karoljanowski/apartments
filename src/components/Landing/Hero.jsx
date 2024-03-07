@@ -29,12 +29,14 @@ export const Hero = () => {
                 transition={{
                     duration: 0.5
                 }}
-                className='absolute w-full h-full origin-bottom' src={fullBg} />
-                <img className='absolute w-full h-full' src={bg} />
-                {buildings.map((building, index) => (
-                    <Building key={index} building={building} id={index} setCurrentBuildingHover={setCurrentBuildingHover} currentBuildingHover={currentBuildingHover} />
-                ))}
-                <h1 className='relative z-10 w-full text-center mt-[10%] text-9xl uppercase font-bold opacity-50 font-header'>
+                className='absolute w-full h-full origin-bottom object-cover lg:object-none object-left' src={fullBg} />
+                <img className='absolute w-full h-full object-cover lg:object-none object-left' src={bg} />
+                <div className='hidden lg:block'>
+                    {buildings.map((building, index) => (
+                        <Building key={index} building={building} id={index} setCurrentBuildingHover={setCurrentBuildingHover} currentBuildingHover={currentBuildingHover} />
+                        ))}
+                </div>
+                <h1 className='relative z-10 w-full text-center mt-[30%] lg:mt-[10%] text-5xl lg:text-9xl uppercase font-bold opacity-50 font-header'>
                     {text.map((el, i) => (
                         <motion.span
                         initial={{opacity: 0}}
@@ -80,7 +82,7 @@ const Building = ({ building }) => {
                 </AnimatePresence>
             </motion.div>
             <motion.img
-                className='absolute w-full h-full'
+                className='absolute w-full h-full object-cover lg:object-none object-left'
                 src={image}
                 initial={{ opacity: 0 }}
                 animate={controls}

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+//custom import
+@import './styles/calendar';
+
+//custom style
 .gradient {
     background: rgb(247, 246, 236);
     background: linear-gradient(180deg, rgba(247, 246, 236, 1) 0%, rgba(248, 247, 234, 1) 25%, rgba(250, 248, 237, 1) 40%, rgba(251, 248, 235, 1) 56%, rgba(250, 247, 235, 1) 81%);

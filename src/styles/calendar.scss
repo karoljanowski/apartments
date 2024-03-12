@@ -1,0 +1,63 @@
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.room1-dot {
+    background-color: red;
+}
+
+.room2-dot {
+    background-color: blue;
+}
+
+.room3-dot {
+    background-color: green;
+}
+
+.room4-dot {
+    background-color: black;
+}
+
+.empty-dot {
+    background-color: #ddd;
+}
+
+// Style for the empty dot
+
+.react-calendar {
+    background-color: #E8D7BD;
+    width: unset;
+    height: 100%;
+    border: 0;
+    padding: 1rem;
+    color: #7A4924;
+
+    & &__tile:disabled {
+        background-color: #E8D7BD;
+        color: #7A4924;
+        font-size: 1rem;
+    }
+
+    & &__navigation button:enabled {
+        border-radius: 1rem;
+
+        &:focus,
+        &:hover {
+            background-color: #F8F7EC;
+        }
+    }
+
+    & abbr:where([title]) {
+        text-decoration: none;
+    }
+}

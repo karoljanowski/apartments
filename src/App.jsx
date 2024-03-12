@@ -1,8 +1,9 @@
 import React from 'react'
 import { Landing } from './components/Landing'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { Login } from './components/Login'
 import { Dashboard } from './components/Dashboard'
+import AuthRoute from './components/AuthRoute'
 
 function App() {
 
@@ -11,7 +12,12 @@ function App() {
           <Routes>
             <Route index path="/" element={<Landing />}/>
             <Route path='/admin' element={<Login/>}/>
-            <Route path='/dashboard'element={<Dashboard/>} />
+            <Route
+                element={<AuthRoute />}
+            >
+              <Route element={<Navigate to="dashboard" replace />} />
+              <Route path='/dashboard'element={<Dashboard/>} />
+            </Route>
           </Routes>
         </>
     )

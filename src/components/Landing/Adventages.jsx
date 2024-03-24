@@ -20,7 +20,7 @@ export const Adventages = () => {
 
 
     return (
-        <div ref={ref} className='gradient h-[250vh] lg:h-[150vh] w-full relative z-20 mb-[200vh] lg:mb-[100vh] border-b border-gray-300 rounded-b-3xl'>
+        <div ref={ref} className='gradient h-[250vh] lg:h-[150vh] w-full relative z-20 border-b border-gray-300 rounded-b-3xl'>
             <div className="px-6 text-[#7a4924] sticky top-0 lg:h-screen flex items-center justify-center flex-col container mx-auto">
                 <h2 className='text-3xl lg:text-6xl uppercase font-bold mb-6 lg:mb-12 mt-6 lg:mt-0'>Adventages</h2>
                 <motion.div className="grid grid-rows-3 grid-cols-1 lg:grid-cols-3 lg:grid-rows-1 relative w-full h-[100vh] lg:h-auto" style={{scale: mediaMatch ? scale : 1}}>

@@ -29,8 +29,8 @@ export const Hero = () => {
                 transition={{
                     duration: 0.5
                 }}
-                className='absolute w-full h-full origin-bottom object-cover lg:object-none object-left' src={fullBg} />
-                <img className='absolute w-full h-full object-cover lg:object-none object-left' src={bg} />
+                className='absolute w-full h-full origin-bottom object-cover object-left lg:object-center' src={fullBg} />
+                <img className='absolute w-full h-full object-cover object-left lg:object-center' src={bg} />
                 <div className='hidden lg:block'>
                     {buildings.map((building, index) => (
                         <Building key={index} building={building} id={index} setCurrentBuildingHover={setCurrentBuildingHover} currentBuildingHover={currentBuildingHover} />
@@ -82,7 +82,7 @@ const Building = ({ building }) => {
                 </AnimatePresence>
             </motion.div>
             <motion.img
-                className='absolute w-full h-full object-cover lg:object-none object-left'
+                className='absolute w-full h-full object-cover object-left lg:object-center'
                 src={image}
                 initial={{ opacity: 0 }}
                 animate={controls}
